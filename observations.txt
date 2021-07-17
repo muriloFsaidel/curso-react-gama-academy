@@ -1,0 +1,74 @@
+componentes são funções que retornam código bloco html específico e independente
+function any(){
+    return(
+        <>
+        </>
+    )
+}
+
+propriedades são parâmetros / valores passados pelo componente 
+ReactDOM.render(
+    <nome do componente propriedade = 'valor'/>
+)
+function nome do componente(props){
+    return(
+        <>
+        <p>{props.propriedade}</p>
+        </>
+    )
+}
+
+
+
+estado permite inicializar variáveis(useState) antes do JSX e atualizar variáveis dentro do JSX(setUsuario) 
+ex: const [ usuario, setUsuario] = useState('Ramos');
+<p>{usuario}</p>
+atualizando valor do estado usuario(setUsuario)
+e tbm da tag(value)
+<tag value={usuario} onChange={e => setUsuario(e.target.value)}/>
+
+
+Árvore de estrutura
+
+index.html -> html base/ completo que começa em <html> </html>
+|
+V
+index.js - > 'renderiza' o html base com o componente dentro de um elemento específico <div id='root'></div>
+|
+V
+App.js -> componente específico function App(){return(<img></img>)}
+|
+V
+App.css -> importa a estilização import './App.cs'
+
+JSX -> JavaScript + html 
+
+dica:
+usar fragment<></>
+dentro do componente, colocar <>qualquer código html </> 
+
+//se houver mudanças informadas no input]
+//e === event
+//target === tag html
+onChange()={e => console.log(e.target.value)}
+
+
+para importar pacotes instalados:
+import 'pacote'
+
+para importar um módulo específico:
+import módulo from 'pacote'
+
+para importar um arquivo:
+import './style.css'
+
+Switch armazena rotas com componentes e acima dele está BrowserRouter(container master)
+exact === exatamente oque foi definido no path, nem se começa ou termina.
+<BrowserRouter>
+<Switch>
+<Route path='/' exact component={nome do arquivo.js}/>
+<Route path='/rota depois do localhost:3000' component={nome do arquivo.js}>
+</Switch>
+</BrowserRouter>
+
+

@@ -1,0 +1,26 @@
+baixar e instalar node.js:
+https://nodejs.org/en/
+
+para verificar se o node.js está instalado:
+node -v
+
+baixar e instalar visual studio code:
+https://code.visualstudio.com/
+
+criar projeto no terminal visual studio code, npx(fonte externa do npm: github):
+npx create-react-app nome do projeto
+
+entrar no projeto:
+cd nome do projeto
+
+iniciar projeto:
+yarn / npm start
+
+para usar a API do github:
+npm / npx install axios
+
+para usar rotacionar a aplicação por componentes:
+npm / npx react-router-dom
+
+para utilizar componentes para estilizar:
+npm install styled-components
